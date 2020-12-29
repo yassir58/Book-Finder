@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+font-family: 'Montserrat', sans-serif;
+background-color: #fdfffc;
+background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+}
+h1,.brand-logo {
+    font-family: 'Ubuntu', sans-serif;
+}
+.intro-section {
+margin-top:100px ;
+margin-left:auto ;
+margin-right:auto ;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+.intro-section form {
+    margin: 30px auto;
+    width: 600px ;
+    display: flex;
+}
+::placeholder {
+    color:#000000 !important;
+}
+nav {
+    padding:0 10%;
+}
+nav a {
+    margin-bottom: 15px !important;
+}
+.bookList-erea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.book-card {
+    width:300px !important;
+    height:300px !important;
+    margin: 20px;
+    max-height: 400px;
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 5px 3px 0 rgba(0,0,0,0.1);
+  transition: 0.3s;
+  margin: 15px;
+  position: relative;
+    
+}
+.book-image img {
+   width: 100%;
+   height: 100%;
+}
+
+
+  
+   .book-content {
+   position: absolute;
+ bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 13px;
+  transform: translateY(102%);
+  transition: 0.3s transform ease-in-out;
+  max-height: 100%;
+  z-index: 1;
+  
+  }
+  .book-content p {
+    color: #767c77;
+    font-size: 18px;
+  }
+  .book-content h3 {
+    font-family:'Ubuntu',sans-serif;
+    color: #3c2946;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  
+  .book-card:hover .book-content{
+    transform: translateY(0);
+    }
+    .taile {
+        display:grid;
+        color: white;
+        grid-template-columns: 80% 1fr;
+        padding: 10px;
+        overflow: hidden;
+        margin-top: -5px;
+        
+      }
+      #loader {
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        z-index: 1;
+        width: 90px;
+        height: 90px;
+        margin: -76px 0 0 -76px;
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        display: none;
+      }
+      
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Add animation to "page content" */
+      .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+      }
+      @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+      }
+      
+      @keyframes animatebottom { 
+        from{ bottom:-100px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+      }
+      
+      #myDiv {
+        display: none;
+        text-align: center;
+      }      
+      
+     @media screen and (max-width:700px){
+      .intro-section form {
+        margin: 30px auto;
+        width: 300px ;
+        display: flex;
+    }
+     }
